@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Uche Japheth — Resume</title>
+<style>
+  :root{
+    --bg:#08070d;
+    --bg-side:#0b0a12;
+    --card:#100e1a;
+    --card-border:rgba(139,92,246,0.16);
+    --purple:#8b5cf6;
+    --purple-light:#b79bff;
+    --purple-dark:#5b3fd6;
+    --text:#f2f1f7;
+    --text-dim:#a8a5b8;
+    --text-dimmer:#726e83;
+    --divider:rgba(139,92,246,0.28);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{background:var(--bg);}
+  body{
+    font-family:'Helvetica Neue', Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    color:var(--text);
+    width:210mm;
+    position:relative;
+    -webkit-font-smoothing:antialiased;
+  }
+  .topbar, .bottombar{
+    height:3px;
+    width:100%;
+    background:linear-gradient(90deg, var(--purple-dark), var(--purple), var(--purple-light), var(--purple));
+  }
+  .resume{
+    display:grid;
+    grid-template-columns:230px 1fr;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .sidebar{
+    background:var(--bg-side);
+    padding:20px 20px 14px;
+    border-right:1px solid rgba(139,92,246,0.10);
+  }
+  .avatar-wrap{
+    position:relative;
+    width:88px;
+    height:88px;
+    margin:0 auto 12px;
+  }
+  .avatar-glow{
+    position:absolute;
+    inset:-30px;
+    background:radial-gradient(circle, rgba(139,92,246,0.35) 0%, rgba(139,92,246,0.08) 45%, transparent 70%);
+    filter:blur(2px);
+  }
+  .avatar{
+    position:relative;
+    width:88px;
+    height:88px;
+    border-radius:50%;
+    border:1.5px solid transparent;
+    background:
+      linear-gradient(var(--bg-side), var(--bg-side)) padding-box,
+      linear-gradient(135deg, var(--purple-light), var(--purple-dark)) border-box;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    font-weight:700;
+    letter-spacing:1px;
+    background-clip:padding-box, border-box;
+    color:var(--purple-light);
+  }
+
+  .side-section{margin-bottom:12px;}
+  .side-heading{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1.2px;
+    color:var(--purple-light);
+    text-transform:uppercase;
+    margin-bottom:9px;
+  }
+  .side-heading svg{width:15px;height:15px;flex-shrink:0;}
+
+  .skill-group{margin-bottom:9px;}
+  .skill-group:last-child{margin-bottom:0;}
+  .skill-group-title{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:0.6px;
+    color:var(--text);
+    text-transform:uppercase;
+    margin-bottom:5px;
+  }
+  .dot{
+    width:5px;height:5px;border-radius:50%;
+    background:var(--purple-light);
+    flex-shrink:0;
+  }
+  .skill-list{list-style:none;}
+  .skill-list li{
+    font-size:11.5px;
+    color:var(--text-dim);
+    line-height:1.55;
+    padding-left:12px;
+    position:relative;
+  }
+  .skill-list li::before{
+    content:'';
+    position:absolute;
+    left:0; top:9px;
+    width:4px;height:1.5px;
+    background:var(--text-dimmer);
+  }
+
+  .side-divider{
+    height:1px;
+    background:linear-gradient(90deg, transparent, var(--divider) 50%, transparent);
+    margin:13px 0;
+  }
+
+  .badges{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:5px;
+  }
+  .badge{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    background:linear-gradient(160deg, rgba(139,92,246,0.09), rgba(139,92,246,0.02));
+    border:1px solid var(--card-border);
+    border-radius:8px;
+    padding:6px 8px;
+    font-size:9.5px;
+    font-weight:600;
+    color:var(--text-dim);
+    text-decoration:none;
+  }
+  .badge svg{width:13px;height:13px;flex-shrink:0;color:var(--purple-light);}
+
+  .values{list-style:none;}
+  .value-item{
+    display:flex;
+    gap:10px;
+    margin-bottom:7px;
+  }
+  .value-item:last-child{margin-bottom:0;}
+  .value-item svg{width:16px;height:16px;flex-shrink:0;color:var(--purple-light); margin-top:2px;}
+  .value-title{font-size:11.5px;font-weight:700;color:var(--text);margin-bottom:2px;}
+  .value-desc{font-size:10px;color:var(--text-dimmer);line-height:1.5;}
+
+  /* ===== MAIN ===== */
+  .main{padding:16px 38px 6px;}
+
+  .name{
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:0.5px;
+    line-height:1.05;
+    background:linear-gradient(120deg, #ffffff 40%, var(--purple-light) 110%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    margin-bottom:5px;
+  }
+  .role-line{
+    font-size:12.5px;
+    font-weight:700;
+    letter-spacing:0.8px;
+    color:var(--purple-light);
+    text-transform:uppercase;
+    margin-bottom:9px;
+  }
+  .role-line .sep{color:var(--text-dimmer); margin:0 6px;}
+  .intro{
+    font-size:12px;
+    color:var(--text-dim);
+    line-height:1.45;
+    max-width:660px;
+    margin-bottom:10px;
+  }
+
+  .contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:22px;
+    padding-top:8px;
+    border-top:1px solid rgba(139,92,246,0.14);
+  }
+  .contact-item{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-size:11px;
+    color:var(--text-dim);
+    text-decoration:none;
+  }
+  .contact-item svg{width:14px;height:14px;color:var(--purple-light);flex-shrink:0;}
+
+  .section{margin-top:13px;}
+  .section-heading{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-size:13.5px;
+    font-weight:700;
+    letter-spacing:0.8px;
+    color:var(--purple-light);
+    text-transform:uppercase;
+    margin-bottom:9px;
+  }
+  .section-heading svg{width:17px;height:17px;flex-shrink:0;}
+  .section-divider{
+    height:1px;
+    background:linear-gradient(90deg, var(--divider), transparent 75%);
+    margin-top:10px;
+  }
+
+  .summary-text{
+    font-size:11.5px;
+    color:var(--text-dim);
+    line-height:1.55;
+  }
+
+  .exp-entry{
+    background:linear-gradient(160deg, rgba(139,92,246,0.05), rgba(139,92,246,0.015));
+    border:1px solid var(--card-border);
+    border-left:2px solid var(--purple);
+    border-radius:10px;
+    padding:11px 16px;
+    margin-bottom:7px;
+  }
+  .exp-entry:last-child{margin-bottom:0;}
+  .exp-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:2px;
+  }
+  .exp-role{font-size:13px; font-weight:700; color:var(--text);}
+  .exp-company{font-size:11.5px; color:var(--purple-light); font-weight:600; margin-bottom:6px;}
+  .exp-date{
+    flex-shrink:0;
+    background:linear-gradient(135deg, #241b3a, #150f24);
+    border:1px solid rgba(139,92,246,0.35);
+    color:var(--purple-light);
+    font-size:9.5px;
+    font-weight:700;
+    letter-spacing:0.3px;
+    padding:5px 10px;
+    border-radius:6px;
+    white-space:nowrap;
+  }
+  .exp-list{list-style:none;}
+  .exp-list li{
+    font-size:11px;
+    color:var(--text-dim);
+    line-height:1.5;
+    padding-left:14px;
+    position:relative;
+    margin-bottom:1px;
+  }
+  .exp-list li::before{
+    content:'';
+    position:absolute;
+    left:0; top:8px;
+    width:4px; height:4px;
+    border-radius:50%;
+    background:var(--purple-light);
+  }
+
+  .edu-entry{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+  }
+  .edu-title{font-size:13px; font-weight:700; color:var(--text); margin-bottom:3px;}
+  .edu-school{font-size:11.5px; color:var(--purple-light); font-weight:600; margin-bottom:3px;}
+  .edu-detail{font-size:10.5px; color:var(--text-dimmer);}
+
+  a{color:inherit;}
+</style>
+</head>
+<body>
+
+<div class="topbar"></div>
+<div class="resume">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="avatar-wrap">
+      <div class="avatar-glow"></div>
+      <div class="avatar">UJ</div>
+    </div>
+
+    <div class="side-section">
+      <div class="side-heading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.6 3.1-6.2 7-6.2s7 2.6 7 6.2"/></svg>
+        Core Expertise
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title"><span class="dot"></span>Community Operations</div>
+        <ul class="skill-list">
+          <li>Discord Moderation</li>
+          <li>Telegram Moderation</li>
+          <li>Community Support</li>
+          <li>Conflict Resolution</li>
+          <li>User Onboarding</li>
+          <li>Community Guidelines Enforcement</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title"><span class="dot"></span>Community Growth</div>
+        <ul class="skill-list">
+          <li>Community Engagement</li>
+          <li>Campaign Support</li>
+          <li>Event Coordination</li>
+          <li>X (Twitter) Management</li>
+          <li>Copywriting</li>
+          <li>Research</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title"><span class="dot"></span>Technical</div>
+        <ul class="skill-list">
+          <li>Discord</li>
+          <li>Telegram</li>
+          <li>Notion</li>
+          <li>Zealy</li>
+          <li>GitHub</li>
+          <li>Excel</li>
+          <li>Google Analytics</li>
+          <li>AI Productivity Tools</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="side-divider"></div>
+
+    <div class="side-section">
+      <div class="side-heading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>
+        Tools &amp; Platforms
+      </div>
+      <div class="badges">
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5c-1.6-.8-3.3-1.3-5-1.5l-.3.6c1.5.3 2.9.8 4.2 1.5M3.5 3.5c1.6-.8 3.3-1.3 5-1.5l.3.6c-1.5.3-2.9.8-4.2 1.5"/><rect x="4" y="7" width="16" height="10" rx="4"/><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/></svg>Discord</div>
+        <a class="badge" href="https://t.me/jappro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg>Telegram</a>
+        <a class="badge" href="https://x.com/jappr0?s=11"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.9 10.3 21 2h-2.2l-6.1 7.1L7.8 2H2l7.5 10.9L2 22h2.2l6.5-7.5L16.2 22H22l-8.1-11.7Zm-2.3 2.7-.8-1.1L4.8 3.6h2.3l4.8 6.9.8 1.1 6.3 9h-2.3l-5-7.6Z"/></svg>X (Twitter)</a>
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11 12 8l3 3M12 8v8"/><rect x="3" y="3" width="18" height="18" rx="4"/></svg>Zealy</div>
+        <a class="badge" href="https://app.notion.com/invite/dfc4187d6404c510da32f4dedc887b9b00bbe5d9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15H6z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>Notion</div></a>
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>Excel</div>
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M11 20V4M18 20v-7"/></svg>Google Analytics</div>
+        <a class="badge" href="https://github.com/jappro"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.65.5.1.68-.22.68-.49 0-.24-.01-1.03-.01-1.87-2.78.61-3.37-1.21-3.37-1.21-.46-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.55 2.34 1.1 2.91.84.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.28 9.28 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.35 4.79-4.58 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.19C22 6.58 17.52 2 12 2Z"/></svg>GitHub</a>
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 15c1-3 2-5 4-5s3 2 4 5"/></svg>Canva</div>
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.5 4.5l2 2M17.5 17.5l2 2M19.5 4.5l-2 2M6.5 17.5l-2 2"/></svg>AI Tools</div>
+      </div>
+    </div>
+
+    <div class="side-divider"></div>
+
+    <div class="side-section">
+      <div class="side-heading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.6 5.9L21 9l-4.5 4.4L17.6 20 12 16.9 6.4 20l1.1-6.6L3 9l6.4-1.1L12 2Z"/></svg>
+        Professional Values
+      </div>
+      <ul class="values">
+        <li class="value-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 19c0-3.3 2.9-5.7 6.5-5.7s6.5 2.4 6.5 5.7"/><circle cx="17.5" cy="9" r="2.4"/><path d="M15 13.5c2.7.2 4.8 1.9 4.8 4.5"/></svg>
+          <div><div class="value-title">Community First</div><div class="value-desc">I put the community's success at the center of every decision.</div></div>
+        </li>
+        <li class="value-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v10H8l-4 4z"/></svg>
+          <div><div class="value-title">Clear Communication</div><div class="value-desc">I keep updates honest, timely, and easy to understand.</div></div>
+        </li>
+        <li class="value-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z"/></svg>
+          <div><div class="value-title">Accountability</div><div class="value-desc">I take ownership of tasks and deliver with consistency.</div></div>
+        </li>
+        <li class="value-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8M21 7v6"/></svg>
+          <div><div class="value-title">Continuous Learning</div><div class="value-desc">I stay curious and always look for ways to grow and contribute.</div></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <div class="name">UCHE JAPHETH</div>
+    <div class="role-line">WEB3 COMMUNITY MODERATOR<span class="sep">•</span>COMMUNITY OPERATIONS<span class="sep">•</span>GROWTH</div>
+    <div class="intro">Community Moderator and Community Operations professional with hands-on experience supporting DeFi and Web3 gaming communities across Discord, Telegram, and X. I combine moderation, communication, and community-growth experience to keep global remote communities active, welcoming, and aligned with project goals.</div>
+
+    <div class="contact-row">
+      <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>Nigeria (Remote)</div>
+      <a class="contact-item" href="mailto:camzyxworld@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>camzyxworld@gmail.com</a>
+      <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>+234 915 366 1595</div>
+      <a class="contact-item" href="https://jappro.github.io/portfolio/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>jappro.github.io/portfolio</a>
+      <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="10" rx="4"/><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/></svg>@jappr0</div>
+    </div>
+
+    <div class="section">
+      <div class="section-heading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.6 3.1-6.2 7-6.2s7 2.6 7 6.2"/></svg>
+        Professional Summary
+      </div>
+      <div class="summary-text">Community Moderator and Community Operations professional with hands-on experience supporting DeFi and Web3 gaming communities across Discord, Telegram, and X. Experienced in maintaining healthy community environments, assisting members, enforcing community standards, coordinating announcements, and driving engagement initiatives for global remote teams. I combine moderation, communication, and marketing experience to help communities remain active, welcoming, and aligned with project goals.</div>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-heading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+        Professional Experience
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-top">
+          <div>
+            <div class="exp-role">Community Manager &amp; Social Media Manager</div>
+            <div class="exp-company">Pecunity (Formerly OctoDeFi)</div>
+          </div>
+          <div class="exp-date">Jun 2025 – Present</div>
+        </div>
+        <ul class="exp-list">
+          <li>Moderate Discord and Telegram communities while maintaining a welcoming environment.</li>
+          <li>Support members by answering questions and escalating issues when needed.</li>
+          <li>Coordinate announcements, updates, and engagement campaigns.</li>
+          <li>Collaborate with the core team on community initiatives.</li>
+          <li>Create engagement-focused content for X.</li>
+          <li>Monitor community sentiment and provide feedback to improve engagement.</li>
+        </ul>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-top">
+          <div>
+            <div class="exp-role">SMM &amp; Community Lead</div>
+            <div class="exp-company">Kiooverse</div>
+          </div>
+          <div class="exp-date">Mar 2026 – Present</div>
+        </div>
+        <ul class="exp-list">
+          <li>Lead Discord and Telegram community engagement.</li>
+          <li>Moderate discussions and ensure community guidelines are followed.</li>
+          <li>Support game announcements and ecosystem updates.</li>
+          <li>Plan social media campaigns to increase visibility.</li>
+          <li>Create community-first content for X.</li>
+          <li>Work closely with the team during product launches and campaigns.</li>
+        </ul>
+      </div>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-heading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+        Education
+      </div>
+      <div class="edu-entry">
+        <div>
+          <div class="edu-title">B.Eng Petroleum Engineering</div>
+          <div class="edu-school">Nnamdi Azikiwe University</div>
+          <div class="edu-detail">Expected Graduation: 2028</div>
+        </div>
+        <div class="exp-date">In Progress</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="bottombar"></div>
+
+</body>
+</html>
