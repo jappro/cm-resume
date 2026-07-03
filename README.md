@@ -23,7 +23,7 @@ This résumé focuses on my experience building healthy, active communities whil
 
 🌐 **Live Resume:** *([visit resume](https://resume-pied-five.vercel.app))*
 
-📄 **Download PDF:** *(download here)*
+📄 **Download PDF:** *([download here](https://resume-pied-five.vercel.app/src/cm-resume.pdf))*
 
 ## Current Focus
 
