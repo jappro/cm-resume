@@ -204,8 +204,8 @@
 
   .photo-wrap{
     flex-shrink:0;
-    width:170px;
-    height:200px;
+    width:210px;
+    height:248px;
     border-radius:14px;
     overflow:hidden;
     box-shadow:0 10px 30px rgba(10,31,68,0.18);
@@ -275,6 +275,29 @@
       "exp projects";
     gap:8px 44px;
     padding:26px 54px 60px;
+  }
+
+  .col-divider{ display:none; }
+
+  @media (min-width:1024px){
+    .content-grid{
+      grid-template-columns:1.75fr 1px 1fr;
+      grid-template-areas:
+        "exp divider skills"
+        "exp divider tools"
+        "exp divider languages"
+        "exp divider education"
+        "exp divider projects";
+      gap:8px 22px;
+    }
+
+    .col-divider{
+      display:block;
+      grid-area:divider;
+      background:var(--line);
+      width:1px;
+      height:100%;
+    }
   }
 
   .area-exp{ grid-area:exp; }
@@ -664,7 +687,7 @@
 <body>
 
 <div class="dl-pill-wrap">
-  <a class="dl-pill" href="PASTE_YOUR_GITHUB_PDF_LINK_HERE" target="_blank" rel="noopener" download aria-label="Download PDF resume">
+  <a class="dl-pill" href="src/smm-resume-v1-0.pdf" target="_blank" rel="noopener" download aria-label="Download PDF resume">
     <span class="dl-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
     </span>
@@ -810,6 +833,8 @@
         </ul>
       </div>
     </section>
+
+    <div class="col-divider"></div>
 
     <!-- CORE SKILLS -->
     <section class="area-skills">
