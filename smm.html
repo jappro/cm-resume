@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Uche Japheth | Social Media Manager Resume</title>
+<meta name="title" content="Uche Japheth | Social Media Manager Resume">
+<meta name="description" content="Social Media Manager driving community & brand growth across Web3, GameFi, DeFi and AI ecosystems.">
+
+<!-- Open Graph / Facebook / LinkedIn / Discord / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://resume-pied-five.vercel.app/smm">
+<meta property="og:title" content="Uche Japheth | Social Media Manager Resume">
+<meta property="og:description" content="Social Media Manager driving community & brand growth across Web3, GameFi, DeFi and AI ecosystems.">
+<meta property="og:image" content="https://resume-pied-five.vercel.app/og-image-smm.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Uche Japheth - Social Media Manager Resume">
+<meta property="og:site_name" content="Uche Japheth Resume">
+
+<!-- Twitter/X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://resume-pied-five.vercel.app/smm">
+<meta name="twitter:title" content="Uche Japheth | Social Media Manager Resume">
+<meta name="twitter:description" content="Social Media Manager driving community & brand growth across Web3, GameFi, DeFi and AI ecosystems.">
+<meta name="twitter:image" content="https://resume-pied-five.vercel.app/src/og-image-smm.jpg">
+
+<link rel="canonical" href="https://resume-pied-five.vercel.app/smm">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f6fb;
+    --panel:#ffffff;
+    --line:#e3e7f0;
+    --line-soft:#edf0f7;
+    --navy-1:#0a1f44;
+    --navy-2:#13275a;
+    --blue-1:#2f5fe0;
+    --blue-2:#4f7dff;
+    --blue-glow:rgba(47,95,224,0.18);
+    --text-hi:#101a34;
+    --text-mid:#4b5470;
+    --text-lo:#8891a8;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html,body{
+    background:var(--bg);
+    color:var(--text-hi);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .page{
+    max-width:1180px;
+    margin:0 auto;
+    background:var(--panel);
+    position:relative;
+    box-shadow:0 0 0 1px var(--line-soft);
+  }
+
+  /* ============ FLOATING DOWNLOAD PILL ============ */
+  .dl-pill-wrap{
+    position:sticky;
+    top:14px;
+    z-index:50;
+    display:flex;
+    justify-content:center;
+    margin-bottom:-24px;
+    pointer-events:none;
+  }
+
+  .dl-pill{
+    pointer-events:auto;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    max-width:300px;
+    width:88%;
+    padding:10px 18px;
+    border-radius:999px;
+    background:linear-gradient(135deg, var(--navy-1), var(--blue-1));
+    box-shadow:0 8px 24px rgba(10,31,68,0.28), 0 0 0 4px rgba(255,255,255,0.9);
+    text-decoration:none;
+    animation:pillFloat 3s ease-in-out infinite;
+  }
+
+  @keyframes pillFloat{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-4px); }
+  }
+
+  .dl-pill .dl-icon{
+    flex-shrink:0;
+    width:22px; height:22px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.18);
+    display:flex; align-items:center; justify-content:center;
+  }
+
+  .dl-pill .dl-icon svg{ width:12px; height:12px; color:#fff; }
+
+  .dl-marquee{
+    flex:1;
+    overflow:hidden;
+    white-space:nowrap;
+    position:relative;
+    mask-image:linear-gradient(90deg, transparent 0, #000 12px, #000 88%, transparent 100%);
+    -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 12px, #000 88%, transparent 100%);
+  }
+
+  .dl-marquee-track{
+    display:inline-flex;
+    gap:36px;
+    animation:marquee 7s linear infinite;
+  }
+
+  .dl-marquee-track span{
+    font-size:12.5px;
+    font-weight:600;
+    color:#fff;
+    letter-spacing:0.02em;
+  }
+
+  @keyframes marquee{
+    0%{ transform:translateX(0); }
+    100%{ transform:translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .dl-pill{ animation:none; }
+    .dl-marquee-track{ animation:none; }
+  }
+
+  /* ============ HEADER ============ */
+  header.hero{
+    padding:56px 54px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:40px;
+  }
+
+  .hero-text{ flex:1; min-width:0; }
+
+  .name{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:52px;
+    letter-spacing:0.5px;
+    line-height:1;
+    color:var(--navy-1);
+    margin-bottom:10px;
+  }
+
+  .role-title{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:21px;
+    color:var(--blue-1);
+    margin-bottom:10px;
+  }
+
+  .tagline{
+    font-size:11.5px;
+    font-weight:600;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--text-lo);
+    margin-bottom:24px;
+  }
+
+  .contact-rows{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .contact-line{
+    display:flex;
+    flex-wrap:wrap;
+    gap:22px;
+  }
+
+  .contact-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:13.5px;
+    color:var(--text-mid);
+    text-decoration:none;
+  }
+
+  .contact-item:hover{ color:var(--blue-1); }
+
+  .contact-item .ic{
+    width:16px; height:16px;
+    flex-shrink:0;
+    color:var(--blue-1);
+  }
+
+  .photo-wrap{
+    flex-shrink:0;
+    width:170px;
+    height:200px;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(10,31,68,0.18);
+    border:1px solid var(--line);
+  }
+
+  .photo-wrap img{
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+    filter:grayscale(100%);
+  }
+
+  .hero-divider{
+    margin:0 54px;
+    height:2px;
+    background:linear-gradient(90deg, var(--navy-1), var(--blue-2) 40%, transparent 100%);
+  }
+
+  /* ============ SUMMARY ============ */
+  .summary-section{
+    padding:34px 54px 8px;
+  }
+
+  .section-head{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:14px;
+  }
+
+  .section-head .icon-box{
+    width:28px; height:28px;
+    border-radius:8px;
+    background:linear-gradient(135deg, var(--navy-1), var(--blue-1));
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+
+  .section-head .icon-box svg{ width:14px; height:14px; color:#fff; }
+
+  .section-head h2{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:0.07em;
+    text-transform:uppercase;
+    color:var(--navy-1);
+  }
+
+  .summary-text{
+    font-size:14.5px;
+    line-height:1.75;
+    color:var(--text-mid);
+    max-width:900px;
+  }
+
+  /* ============ GRID CONTENT ============ */
+  .content-grid{
+    display:grid;
+    grid-template-columns:1.75fr 1fr;
+    grid-template-areas:
+      "exp skills"
+      "exp tools"
+      "exp languages"
+      "exp education"
+      "exp projects";
+    gap:8px 44px;
+    padding:26px 54px 60px;
+  }
+
+  .area-exp{ grid-area:exp; }
+  .area-skills{ grid-area:skills; }
+  .area-tools{ grid-area:tools; }
+  .area-languages{ grid-area:languages; }
+  .area-education{ grid-area:education; }
+  .area-projects{ grid-area:projects; }
+
+  .content-grid > section{ margin-bottom:32px; }
+  .content-grid > .area-exp{ margin-bottom:0; }
+
+  /* ---- Experience ---- */
+  .exp-item{
+    padding-left:26px;
+    position:relative;
+    margin-bottom:26px;
+  }
+
+  .exp-item:last-child{ margin-bottom:0; }
+
+  .exp-item::before{
+    content:'';
+    position:absolute;
+    left:0; top:5px;
+    width:9px; height:9px;
+    border-radius:50%;
+    background:var(--blue-1);
+    box-shadow:0 0 0 4px var(--blue-glow);
+  }
+
+  .exp-item::after{
+    content:'';
+    position:absolute;
+    left:4px; top:18px;
+    bottom:-26px;
+    width:1px;
+    background:linear-gradient(180deg, var(--line), transparent);
+  }
+
+  .exp-item:last-child::after{ display:none; }
+
+  .exp-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:14px;
+    margin-bottom:2px;
+  }
+
+  .exp-title{
+    font-size:15px;
+    font-weight:700;
+    color:var(--navy-1);
+  }
+
+  .exp-meta{
+    text-align:right;
+    flex-shrink:0;
+  }
+
+  .exp-date{
+    font-size:11.5px;
+    font-weight:600;
+    color:var(--blue-1);
+    white-space:nowrap;
+  }
+
+  .exp-loc{
+    font-size:11px;
+    color:var(--text-lo);
+  }
+
+  .exp-org{
+    font-size:13px;
+    font-weight:600;
+    color:var(--blue-1);
+    margin-bottom:9px;
+  }
+
+  .exp-org .sub{ color:var(--text-lo); font-weight:500; }
+
+  .exp-list{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+
+  .exp-list li{
+    font-size:13.3px;
+    line-height:1.6;
+    color:var(--text-mid);
+    padding-left:14px;
+    position:relative;
+  }
+
+  .exp-list li::before{
+    content:'';
+    position:absolute;
+    left:0; top:7px;
+    width:4px; height:4px;
+    border-radius:50%;
+    background:var(--blue-2);
+  }
+
+  /* ---- Skills ---- */
+  .skill-pills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  .skill-pill{
+    font-size:12px;
+    font-weight:500;
+    color:var(--text-mid);
+    padding:7px 13px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:#fafbfe;
+    white-space:nowrap;
+  }
+
+  /* ---- Tools ---- */
+  .tool-group{ margin-bottom:16px; }
+  .tool-group:last-child{ margin-bottom:0; }
+
+  .tool-group-title{
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--blue-1);
+    margin-bottom:9px;
+  }
+
+  .tool-items{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 16px;
+  }
+
+  .tool-item{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-size:12.5px;
+    color:var(--text-mid);
+    font-weight:500;
+  }
+
+  .tool-item .t-ic{
+    width:18px; height:18px;
+    flex-shrink:0;
+    border-radius:5px;
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+
+  .tool-item .t-ic img, .tool-item .t-ic svg{ width:100%; height:100%; }
+
+  /* ---- Languages ---- */
+  .lang-list{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+  }
+
+  .lang-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:13px;
+  }
+
+  .lang-name{ color:var(--text-hi); font-weight:600; }
+  .lang-level{ color:var(--text-lo); font-size:12px; }
+
+  /* ---- Education ---- */
+  .edu-title{
+    font-size:14px;
+    font-weight:700;
+    color:var(--navy-1);
+    margin-bottom:4px;
+  }
+
+  .edu-school{
+    font-size:12.5px;
+    color:var(--blue-1);
+    font-weight:600;
+    margin-bottom:4px;
+  }
+
+  .edu-date{
+    font-size:12px;
+    color:var(--text-lo);
+  }
+
+  /* ---- Projects ---- */
+  .proj-title{
+    font-size:14px;
+    font-weight:700;
+    color:var(--navy-1);
+    margin-bottom:6px;
+  }
+
+  .proj-desc{
+    font-size:12.8px;
+    line-height:1.6;
+    color:var(--text-mid);
+  }
+
+  /* ============ FOOTER ============ */
+  .footer-bar{
+    height:3px;
+    background:linear-gradient(90deg, var(--navy-1), var(--blue-2) 50%, var(--navy-1));
+  }
+
+  .footer-tag{
+    text-align:right;
+    padding:14px 54px 22px;
+    font-size:11px;
+    color:var(--text-lo);
+    letter-spacing:0.04em;
+  }
+
+  .footer-tag span{ color:var(--blue-1); font-weight:600; }
+
+  /* ============ MOBILE TOAST ============ */
+  .view-toast{
+    position:fixed;
+    left:50%;
+    bottom:22px;
+    transform:translate(-50%, 20px);
+    width:calc(100% - 40px);
+    max-width:360px;
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding:14px 16px;
+    border-radius:14px;
+    border:1px solid var(--line);
+    background:#ffffff;
+    box-shadow:0 10px 30px rgba(10,31,68,0.18);
+    z-index:999;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .45s ease, transform .45s ease;
+  }
+
+  .view-toast.show{
+    opacity:1;
+    transform:translate(-50%, 0);
+    pointer-events:auto;
+  }
+
+  .view-toast .toast-face{
+    width:34px; height:34px;
+    border-radius:50%;
+    flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg, var(--navy-1), var(--blue-1));
+  }
+
+  .view-toast .toast-face svg{ width:18px; height:18px; color:#fff; }
+
+  .view-toast .toast-body{ flex:1; }
+
+  .view-toast .toast-title{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:12.5px;
+    font-weight:700;
+    color:var(--navy-1);
+    margin-bottom:3px;
+  }
+
+  .view-toast .toast-msg{
+    font-size:12px;
+    line-height:1.5;
+    color:var(--text-mid);
+  }
+
+  .view-toast .toast-close{
+    background:none;
+    border:none;
+    color:var(--text-lo);
+    font-size:16px;
+    line-height:1;
+    cursor:pointer;
+    padding:2px 4px;
+    flex-shrink:0;
+  }
+
+  @media (min-width:861px){
+    .view-toast{ display:none; }
+  }
+
+  /* =======================================================
+     TABLET (861px – 1023px): tighter two-column
+     ======================================================= */
+  @media (max-width:1023px) and (min-width:861px){
+    header.hero{ padding:44px 34px 26px; gap:26px; }
+    .hero-divider{ margin:0 34px; }
+    .summary-section{ padding:28px 34px 8px; }
+    .content-grid{ padding:22px 34px 50px; gap:8px 30px; grid-template-columns:1.6fr 1fr; }
+    .photo-wrap{ width:140px; height:165px; }
+    .name{ font-size:42px; }
+  }
+
+  /* =======================================================
+     MOBILE (≤860px): single centered flow, reordered
+     ======================================================= */
+  @media (max-width:860px){
+
+    .dl-pill-wrap{ margin-bottom:-20px; }
+    .dl-pill{ max-width:280px; }
+
+    header.hero{
+      flex-direction:column-reverse;
+      align-items:center;
+      text-align:center;
+      padding:34px 24px 28px;
+      gap:20px;
+    }
+
+    .photo-wrap{
+      width:150px;
+      height:178px;
+    }
+
+    .hero-text{ width:100%; display:flex; flex-direction:column; align-items:center; }
+
+    .name{ font-size:32px; }
+    .role-title{ font-size:16px; }
+    .tagline{ margin-bottom:20px; }
+
+    .contact-rows{ align-items:center; }
+    .contact-line{ justify-content:center; }
+
+    .hero-divider{ margin:0 24px; }
+
+    .summary-section{ padding:26px 24px 4px; text-align:center; }
+    .section-head{ justify-content:center; }
+    .summary-text{ margin:0 auto; }
+
+    .content-grid{
+      display:flex;
+      flex-direction:column;
+      padding:22px 24px 50px;
+      gap:0;
+    }
+
+    .content-grid > section{
+      width:100%;
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .area-exp{ order:1; }
+    .area-projects{ order:2; }
+    .area-skills{ order:3; }
+    .area-tools{ order:4; }
+    .area-education{ order:5; }
+    .area-languages{ order:6; margin-bottom:0 !important; }
+
+    .section-head{ justify-content:center; }
+
+    .exp-item{ padding-left:0; text-align:center; }
+    .exp-item::before, .exp-item::after{ display:none; }
+    .exp-top{ flex-direction:column; align-items:center; gap:6px; }
+    .exp-meta{ text-align:center; }
+    .exp-list{ align-items:center; }
+    .exp-list li{ padding-left:0; text-align:left; max-width:380px; }
+    .exp-list li::before{ display:none; }
+
+    .skill-pills{ justify-content:center; }
+
+    .tool-items{ justify-content:center; }
+
+    .lang-row{ max-width:220px; margin:0 auto; }
+
+    .footer-tag{ text-align:center; padding:14px 24px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="dl-pill-wrap">
+  <a class="dl-pill" href="PASTE_YOUR_GITHUB_PDF_LINK_HERE" target="_blank" rel="noopener" download aria-label="Download PDF resume">
+    <span class="dl-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+    </span>
+    <span class="dl-marquee">
+      <span class="dl-marquee-track">
+        <span>Click here to download PDF file for this resume</span>
+        <span>Click here to download PDF file for this resume</span>
+      </span>
+    </span>
+  </a>
+</div>
+
+<div class="page">
+
+  <header class="hero">
+    <div class="hero-text">
+      <h1 class="name">UCHE JAPHETH</h1>
+      <div class="role-title">Social Media Manager | Community &amp; Brand Growth</div>
+      <div class="tagline">Building Communities. Growing Brands. Improving Systems.</div>
+
+      <div class="contact-rows">
+        <div class="contact-line">
+          <a class="contact-item" href="mailto:camzyxworld@gmail.com"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>camzyxworld@gmail.com</a>
+          <a class="contact-item" href="tel:+2349153661595"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h3l1.5 4.5L8 9.5a12 12 0 0 0 6.5 6.5l2-2.5L21 15v3a2 2 0 0 1-2 2C11 20 4 13 4 5a2 2 0 0 1 2-2Z"/></svg>+234 915 366 1595</a>
+        </div>
+        <div class="contact-line">
+          <a class="contact-item" href="https://x.com/jappr0" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>x.com/jappr0</a>
+          <a class="contact-item" href="https://linkedin.com/in/jappr0" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12M7.11 20.45H3.56V9h3.55z"/></svg>linkedin.com/in/jappr0</a>
+          <a class="contact-item" href="https://jappro.github.io/portfolio/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 15 15 9M11 6l1-1a4 4 0 0 1 5.7 5.7l-1 1M13 18l-1 1a4 4 0 0 1-5.7-5.7l1-1"/></svg>jappro.github.io/portfolio</a>
+        </div>
+        <div class="contact-line">
+          <a class="contact-item" href="https://resume-pied-five.vercel.app" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg>resume-pied-five.vercel.app</a>
+          <a class="contact-item" href="https://github.com/jappro" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>github.com/jappro</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo-wrap">
+      <img src="src/smm-hpf.jpg" alt="Uche Japheth">
+    </div>
+  </header>
+
+  <div class="hero-divider"></div>
+
+  <section class="summary-section">
+    <div class="section-head">
+      <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 20c0-3.6 3-6 6.5-6s6.5 2.4 6.5 6"/></svg></div>
+      <h2>Professional Summary</h2>
+    </div>
+    <p class="summary-text">Results-driven Social Media Manager with hands-on experience driving community growth and brand visibility across Web3 ecosystems including GameFi, DeFi, and AI projects. Skilled in crafting engaging content, managing social media campaigns, and building active communities on X (Twitter), Discord, and Telegram. Experienced in writing, scheduling, and promoting content, coordinating with teams, and gathering community feedback to strengthen communication and engagement. Passionate about leveraging AI-assisted workflows and data-informed strategies to grow brands and deliver measurable impact.</p>
+  </section>
+
+  <div class="content-grid">
+
+    <!-- EXPERIENCE -->
+    <section class="area-exp">
+      <div class="section-head">
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div>
+        <h2>Professional Experience</h2>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <div class="exp-title">Community Manager &amp; Social Media Manager</div>
+          <div class="exp-meta"><div class="exp-date">Jun 2025 – Dec 2025</div><div class="exp-loc">Remote</div></div>
+        </div>
+        <div class="exp-org">Pecunity <span class="sub">(formerly OctoDeFi)</span></div>
+        <ul class="exp-list">
+          <li>Managed social media communications on X while overseeing community operations on Discord and Telegram.</li>
+          <li>Created and published engaging content, announcements, and shills to increase community participation before and after the PEC launch.</li>
+          <li>Wrote key announcements and coordinated content with the team to ensure consistent messaging across platforms.</li>
+          <li>Supported rebranding from OctoDeFi to Pecunity through strategic community messaging and engagement initiatives.</li>
+          <li>Collaborated with remote teams to drive awareness, grow the community, and support product adoption.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <div class="exp-title">Campaign Manager</div>
+          <div class="exp-meta"><div class="exp-date">Sept 2025</div><div class="exp-loc">Remote</div></div>
+        </div>
+        <div class="exp-org">Pecunity</div>
+        <ul class="exp-list">
+          <li>Managed the September Zealy campaign with a $1,000 reward pool.</li>
+          <li>Designed campaign structure, task flow, and reward distribution.</li>
+          <li>Coordinated with the team to ensure smooth execution and participant engagement.</li>
+          <li>Promoted the campaign across X, Discord, and Telegram to maximize participation.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <div class="exp-title">Social Media &amp; Community Lead</div>
+          <div class="exp-meta"><div class="exp-date">Mar 2026 – Present</div><div class="exp-loc">Remote</div></div>
+        </div>
+        <div class="exp-org">Kiooverse</div>
+        <ul class="exp-list">
+          <li>Responsible for end-to-end social media strategy and community growth.</li>
+          <li>Write tweets, schedule posts, and plan content across X, Discord, and Telegram.</li>
+          <li>Create and edit graphics, coordinate with designers, and ensure brand consistency.</li>
+          <li>Designed 2-week Early Access launch strategy for Kiooon Origins with daily announcements and engagement plan.</li>
+          <li>Review community feedback and insights to improve communication and content.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <div class="exp-title">Community Support &amp; Content Creator</div>
+          <div class="exp-meta"><div class="exp-date">Q3 2024 – Q4 2024</div><div class="exp-loc">Remote</div></div>
+        </div>
+        <div class="exp-org">BIGA Arcade</div>
+        <ul class="exp-list">
+          <li>Created promotional content and reposted official updates to increase visibility.</li>
+          <li>Promoted weekly game nights and community events across X.</li>
+          <li>Host and stream live gameplay shows on YouTube to engage the community.</li>
+          <li>Drove engagement and helped grow the community through consistent content.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <div class="exp-title">Ambassador</div>
+          <div class="exp-meta"><div class="exp-date">2025</div><div class="exp-loc">Remote</div></div>
+        </div>
+        <div class="exp-org">Perspective AI</div>
+        <ul class="exp-list">
+          <li>Created weekly awareness threads, tweets, and promotional shills on X.</li>
+          <li>Engaged with community through reply boosts on official posts.</li>
+          <li>Supported ecosystem growth and awareness through consistent content creation.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-top">
+          <div class="exp-title">Ambassador &amp; Community Support</div>
+          <div class="exp-meta"><div class="exp-date">Q3 2024</div><div class="exp-loc">Remote</div></div>
+        </div>
+        <div class="exp-org">Vexor Network</div>
+        <ul class="exp-list">
+          <li>Supported community campaigns and promotional initiatives.</li>
+          <li>Created engaging content and helped increase project visibility.</li>
+          <li>Encouraged user participation through community activities and updates.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CORE SKILLS -->
+    <section class="area-skills">
+      <div class="section-head">
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg></div>
+        <h2>Core Skills</h2>
+      </div>
+      <div class="skill-pills">
+        <span class="skill-pill">Social Media Strategy</span>
+        <span class="skill-pill">Content Creation</span>
+        <span class="skill-pill">Community Growth</span>
+        <span class="skill-pill">Brand Awareness</span>
+        <span class="skill-pill">Community Management</span>
+        <span class="skill-pill">Campaigns</span>
+        <span class="skill-pill">Discord Management</span>
+        <span class="skill-pill">Telegram</span>
+        <span class="skill-pill">X (Twitter) Marketing</span>
+        <span class="skill-pill">Engagement</span>
+        <span class="skill-pill">Content Writing</span>
+        <span class="skill-pill">AI-Assisted Workflows</span>
+        <span class="skill-pill">Cross-functional Collaboration</span>
+        <span class="skill-pill">Research &amp; Trend Analysis</span>
+      </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section class="area-tools">
+      <div class="section-head">
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94Z"/></svg></div>
+        <h2>Tools &amp; Platforms</h2>
+      </div>
+
+      <div class="tool-group">
+        <div class="tool-group-title">Social &amp; Community</div>
+        <div class="tool-items">
+          <span class="tool-item"><span class="t-ic"><svg viewBox="0 0 24 24"><path fill="#0B0B0B" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>X (Twitter)</span>
+          <span class="tool-item"><span class="t-ic"><svg viewBox="0 0 16 16"><path fill="#5865F2" d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.644-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/></svg></span>Discord</span>
+          <span class="tool-item"><span class="t-ic"><svg viewBox="0 0 16 16"><path fill="#29A9EA" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/></svg></span>Telegram</span>
+          <span class="tool-item"><span class="t-ic"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#0B0B0B"/><text x="12" y="17" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#fff" text-anchor="middle">Z</text></svg></span>Zealy</span>
+          <span class="tool-item"><span class="t-ic"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#FF0000"/><path fill="#fff" d="M9.8 15.5V8.5l6 3.5z"/></svg></span>YouTube</span>
+        </div>
+      </div>
+
+      <div class="tool-group">
+        <div class="tool-group-title">Content &amp; Design</div>
+        <div class="tool-items">
+          <span class="tool-item"><span class="t-ic"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#00C4CC"/><text x="12" y="16.5" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#fff" text-anchor="middle">C</text></svg></span>Canva</span>
+          <span class="tool-item"><span class="t-ic"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#1E1E1E"/><text x="12" y="16.5" font-family="Arial, sans-serif" font-weight="700" font-size="12" fill="#fff" text-anchor="middle">F</text></svg></span>Figma</span>
+        </div>
+      </div>
+
+      <div class="tool-group">
+        <div class="tool-group-title">Productivity</div>
+        <div class="tool-items">
+          <span class="tool-item"><span class="t-ic"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/notion/default.svg" alt="Notion"></span>Notion</span>
+          <span class="tool-item"><span class="t-ic"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#1A73E8"/><text x="12" y="16.5" font-family="Arial, sans-serif" font-weight="700" font-size="11" fill="#fff" text-anchor="middle">GW</text></svg></span>Google Workspace</span>
+          <span class="tool-item"><span class="t-ic"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#D83B01"/><text x="12" y="16.5" font-family="Arial, sans-serif" font-weight="700" font-size="11" fill="#fff" text-anchor="middle">MS</text></svg></span>Microsoft Office</span>
+        </div>
+      </div>
+
+      <div class="tool-group">
+        <div class="tool-group-title">Development &amp; AI</div>
+        <div class="tool-items">
+          <span class="tool-item"><span class="t-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#0B0B0B"/><path fill="#fff" transform="translate(4.3,4.3) scale(0.63)" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>GitHub</span>
+          <span class="tool-item"><span class="t-ic"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#007ACC"/><text x="12" y="16" font-family="Arial, sans-serif" font-weight="700" font-size="9" fill="#fff" text-anchor="middle">VS</text></svg></span>VS Code</span>
+          <span class="tool-item"><span class="t-ic"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#10A37F"/><text x="12" y="16.5" font-family="Arial, sans-serif" font-weight="700" font-size="10" fill="#fff" text-anchor="middle">GPT</text></svg></span>ChatGPT</span>
+          <span class="tool-item"><span class="t-ic"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#D97757"/><text x="12" y="16.5" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#fff" text-anchor="middle">C</text></svg></span>Claude</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- LANGUAGES -->
+    <section class="area-languages">
+      <div class="section-head">
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z"/></svg></div>
+        <h2>Languages</h2>
+      </div>
+      <div class="lang-list">
+        <div class="lang-row"><span class="lang-name">English</span><span class="lang-level">Fluent</span></div>
+        <div class="lang-row"><span class="lang-name">Igbo</span><span class="lang-level">Native</span></div>
+        <div class="lang-row"><span class="lang-name">German (A1)</span><span class="lang-level">Basic</span></div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="area-education">
+      <div class="section-head">
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 9 12 4l10 5-10 5-10-5Z"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg></div>
+        <h2>Education</h2>
+      </div>
+      <div class="edu-title">B.Eng. in Petroleum Engineering</div>
+      <div class="edu-school">Nnamdi Azikiwe University, Awka</div>
+      <div class="edu-date">2023 – 2028 (Expected)</div>
+    </section>
+
+    <!-- SELECTED PROJECTS -->
+    <section class="area-projects">
+      <div class="section-head">
+        <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></div>
+        <h2>Selected Projects</h2>
+      </div>
+      <div class="proj-title">VINCESlink (Business Website)</div>
+      <p class="proj-desc">Designed and developed a responsive e-commerce website for VINCESlink using HTML, CSS, and JavaScript. Managed version control with GitHub and deployed for public access.</p>
+    </section>
+
+  </div>
+
+  <div class="footer-bar"></div>
+  <div class="footer-tag">Resume Series | <span>SMM</span> · v1.0</div>
+</div>
+
+<div class="view-toast" id="viewToast">
+  <div class="toast-face">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M8.5 10.2h.01M15.5 10.2h.01"/>
+      <path d="M8 14.2c1 1.3 2.4 2 4 2s3-.7 4-2"/>
+    </svg>
+  </div>
+  <div class="toast-body">
+    <div class="toast-title">Quick tip</div>
+    <div class="toast-msg">For the best experience, please view this resume on a desktop screen.</div>
+  </div>
+  <button class="toast-close" id="toastClose" aria-label="Dismiss">×</button>
+</div>
+
+<script>
+  (function(){
+    var toast = document.getElementById('viewToast');
+    var closeBtn = document.getElementById('toastClose');
+    var isMobile = window.matchMedia('(max-width: 860px)').matches;
+
+    if (isMobile && toast) {
+      var showTimer = setTimeout(function(){
+        toast.classList.add('show');
+      }, 700);
+
+      var hideTimer = setTimeout(function(){
+        toast.classList.remove('show');
+      }, 7000);
+
+      closeBtn.addEventListener('click', function(){
+        toast.classList.remove('show');
+        clearTimeout(showTimer);
+        clearTimeout(hideTimer);
+      });
+    }
+  })();
+</script>
+</body>
+</html>
